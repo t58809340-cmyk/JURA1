@@ -1,0 +1,338 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kolawole Joy — Digital Designer</title>
+  <meta name="description" content="Premium personal portfolio of Kolawole Joy, Brand & UI Designer." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0b0b0d;
+      --card: #121218;
+      --text: #eaeaf0;
+      --muted: #a0a0b3;
+      --accent: #7c5cff;
+      --accent-soft: rgba(124,92,255,0.15);
+      --border: rgba(255,255,255,0.08);
+    }* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background: radial-gradient(1200px 600px at 10% -10%, rgba(124,92,255,0.15), transparent 40%),
+              radial-gradient(1000px 500px at 90% 10%, rgba(124,92,255,0.12), transparent 45%),
+              var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+a { color: inherit; text-decoration: none; }
+img { max-width: 100%; display: block; }
+
+/* Layout */
+.container {
+  width: min(1100px, 92%);
+  margin: auto;
+}
+
+section { padding: 96px 0; }
+
+/* Header */
+header {
+  position: sticky;
+  top: 0;
+  backdrop-filter: blur(10px);
+  background: rgba(11,11,13,0.7);
+  border-bottom: 1px solid var(--border);
+  z-index: 100;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 0;
+}
+
+.logo {
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 28px;
+}
+
+.nav-links a {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.nav-links a:hover { color: var(--text); }
+
+/* Hero */
+.hero {
+  min-height: calc(100vh - 80px);
+  display: flex;
+  align-items: center;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.badge {
+  display: inline-block;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-size: 13px;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: clamp(36px, 5vw, 56px);
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  color: var(--muted);
+  max-width: 520px;
+  margin-bottom: 32px;
+}
+
+.cta {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 14px 22px;
+  border-radius: 12px;
+  font-weight: 500;
+  font-size: 15px;
+  border: 1px solid var(--border);
+  transition: all 0.25s ease;
+}
+
+.btn.primary {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+
+.btn.primary:hover { transform: translateY(-2px); }
+
+.btn.secondary {
+  background: transparent;
+  color: var(--text);
+}
+
+.btn.secondary:hover { border-color: var(--accent); }
+
+.hero-card {
+  background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0));
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  padding: 32px;
+}
+
+.hero-card h3 { margin-bottom: 12px; }
+
+/* About */
+.about {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+}
+
+.about p { color: var(--muted); }
+
+/* Services */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+.service {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 28px;
+  transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.service:hover {
+  transform: translateY(-6px);
+  border-color: var(--accent);
+}
+
+.service h4 { margin-bottom: 10px; }
+.service p { color: var(--muted); font-size: 14px; }
+
+/* Portfolio */
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 28px;
+}
+
+.project {
+  border-radius: 22px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: var(--card);
+}
+
+.project-content { padding: 22px; }
+.project-content h4 { margin-bottom: 8px; }
+.project-content p { color: var(--muted); font-size: 14px; }
+
+/* CTA */
+.final-cta {
+  text-align: center;
+  background: linear-gradient(180deg, rgba(124,92,255,0.15), rgba(124,92,255,0));
+  border: 1px solid var(--border);
+  border-radius: 28px;
+  padding: 72px 24px;
+}
+
+.final-cta h2 { font-size: clamp(28px, 4vw, 40px); margin-bottom: 16px; }
+.final-cta p { color: var(--muted); margin-bottom: 32px; }
+
+/* Footer */
+footer {
+  padding: 48px 0;
+  color: var(--muted);
+  font-size: 14px;
+  border-top: 1px solid var(--border);
+}
+
+.footer-grid {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .hero-grid, .about { grid-template-columns: 1fr; }
+  section { padding: 72px 0; }
+}
+
+  </style>
+</head>
+<body>  <header>
+    <div class="container nav">
+      <div class="logo">JURA</div>
+      <nav class="nav-links">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#work">Work</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <span class="badge">Brand & UI Designer</span>
+          <h1>Designing clean, modern digital experiences that help brands stand out.</h1>
+          <p>I help individuals and businesses build strong visual identities and high‑converting digital products with clarity and precision.</p>
+          <div class="cta">
+            <a href="#work" class="btn primary">View Work</a>
+            <a href="#contact" class="btn secondary">Contact Me</a>
+          </div>
+        </div>
+        <div class="hero-card">
+          <h3>Focused on results</h3>
+          <p>I do not design for aesthetics alone. Every layout, color, and interaction is crafted to communicate value and drive action.</p>
+        </div>
+      </div>
+    </section><!-- About -->
+<section id="about">
+  <div class="container about">
+    <div>
+      <h2>About Me</h2>
+    </div>
+    <div>
+      <p>I am a digital designer specializing in brand identity and user interface design. My work focuses on clarity, consistency, and usability—ensuring brands communicate effectively and look professional across all platforms.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Services -->
+<section id="services">
+  <div class="container">
+    <h2 style="margin-bottom:32px;">Services</h2>
+    <div class="services-grid">
+      <div class="service">
+        <h4>Brand Identity Design</h4>
+        <p>Visual systems that give your brand a professional and memorable presence.</p>
+      </div>
+      <div class="service">
+        <h4>UI / Website Design</h4>
+        <p>Clean, responsive interfaces designed to convert visitors into clients.</p>
+      </div>
+      <div class="service">
+        <h4>Digital Presence Setup</h4>
+        <p>Complete online presentation including landing pages and portfolio sites.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Portfolio -->
+<section id="work">
+  <div class="container">
+    <h2 style="margin-bottom:32px;">Selected Work</h2>
+    <div class="projects">
+      <div class="project">
+        <div class="project-content">
+          <h4>Creative Agency Concept</h4>
+          <p>Designed a modern homepage layout focused on trust, clarity, and conversion.</p>
+        </div>
+      </div>
+      <div class="project">
+        <div class="project-content">
+          <h4>Personal Brand Portfolio</h4>
+          <p>Minimal portfolio system for a digital professional with strong visual hierarchy.</p>
+        </div>
+      </div>
+      <div class="project">
+        <div class="project-content">
+          <h4>Landing Page Redesign</h4>
+          <p>Improved structure and CTA placement to increase engagement and inquiries.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section id="contact">
+  <div class="container final-cta">
+    <h2>Have a project in mind?</h2>
+    <p>Let us work together to create something clear, professional, and effective.</p>
+    <a href="https://wa.me/2349037799675" class="btn primary">Start a Conversation</a>
+  </div>
+</section>
+
+  </main>  <footer>
+    <div class="container footer-grid">
+      <div>© 2026 JURA</div>
+      <div>Built with focus and intention</div>
+    </div>
+  </footer></body>
+</html>
